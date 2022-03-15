@@ -10,9 +10,9 @@
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
 // ==/UserScript==
 
-setTimeout(function(){
+window.addEventListener('load', function() {
         $('#pop-limit').find('a').click();
         is_premium=true;
         get_sources('');
         alert('Done');
-},2000);
+});
