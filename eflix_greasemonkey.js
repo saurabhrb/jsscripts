@@ -12,13 +12,10 @@
 
 //Avoid conflicts
 this.$ = this.jQuery = jQuery.noConflict(true);
-$(window).bind('load', function()
-{
-
-$('#pop-limit').find('a').click();
-    is_premium=true;
-    get_sources('');
-
-    console.log('tampermonkey EFLIX premium activated, by saurabh');
-
+$(document).ready(function(){
+    setTimeout(function() {
+        $('#pop-limit').find('a').click();
+        is_premium=true;
+        get_sources('');
+    },1000);
 });
