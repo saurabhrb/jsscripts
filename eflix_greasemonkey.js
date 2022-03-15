@@ -10,10 +10,8 @@
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
 // ==/UserScript==
 
-var $ = unsafeWindow.jQuery;
-$(document).ready(function()
-{
+setTimeout(function(){
         $('#pop-limit').find('a').click();
         is_premium=true;
         get_sources('');
-});
+},1000);
