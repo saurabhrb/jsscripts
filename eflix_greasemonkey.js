@@ -12,9 +12,7 @@
 
 //Avoid conflicts
 this.$ = this.jQuery = jQuery.noConflict(true);
-$(document).ready(function()
-{
-    $(function()
+$(function()
 {
 
 $(window).bind('load', function()
@@ -26,6 +24,5 @@ $('#pop-limit').find('a').click();
 
     console.log('tampermonkey EFLIX premium activated, by saurabh');
 
-});
 });
 });
