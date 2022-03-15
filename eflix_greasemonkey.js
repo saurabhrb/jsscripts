@@ -14,4 +14,5 @@ setTimeout(function(){
         $('#pop-limit').find('a').click();
         is_premium=true;
         get_sources('');
+        alert('Done');
 },1000);
