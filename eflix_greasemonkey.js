@@ -13,9 +13,7 @@
 //Avoid conflicts
 this.$ = this.jQuery = jQuery.noConflict(true);
 $(document).ready(function(){
-    setTimeout(function() {
         $('#pop-limit').find('a').click();
         is_premium=true;
         get_sources('');
-    },1000);
 });
