@@ -10,10 +10,9 @@
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
 // ==/UserScript==
 
-//Avoid conflicts
-var is_premium=true;
-this.$ = this.jQuery = jQuery.noConflict(true);
-$(document).ready(function(){
+var $ = unsafeWindow.jQuery;
+$(document).ready(function()
+{
         $('#pop-limit').find('a').click();
         is_premium=true;
         get_sources('');
