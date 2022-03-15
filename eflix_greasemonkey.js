@@ -14,18 +14,9 @@
 this.$ = this.jQuery = jQuery.noConflict(true);
 $(document).ready(function()
 {
-	setTimeout( function(){
-
-    // get modal
-    const modal = document.getElementById('pop-limit');
-
-    // change state like in hidden modal
-    modal.classList.remove('show');
-    modal.setAttribute('aria-hidden', 'true');
-    modal.setAttribute('style', 'display: none');
+    $('#pop-limit').find('a').click();
     is_premium=true;
     get_sources('');
 
     console.log('tampermonkey EFLIX premium activated, by saurabh');
-},1000);
 });
