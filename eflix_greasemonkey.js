@@ -11,8 +11,23 @@
 // ==/UserScript==
 
 window.addEventListener('load', function() {
-        $('#pop-limit').find('a').click();
-        is_premium=true;
-        get_sources('');
-        alert('Done');
-});
+    // your code here
+    // get modal
+    const modal = document.getElementById('pop-limit');
+
+    // change state like in hidden modal
+    modal.classList.remove('show');
+    modal.setAttribute('aria-hidden', 'true');
+    modal.setAttribute('style', 'display: none');
+
+     // get modal backdrop
+     const modalBackdrops = document.getElementsByClassName('modal-backdrop');
+
+     // remove opened modal backdrop
+     document.body.removeChild(modalBackdrops[0]);
+
+    is_premium=true;
+    get_sources('');
+
+    console.log('tampermonkey EFLIX premium activated, by saurabh');
+}, false);
