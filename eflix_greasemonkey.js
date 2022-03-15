@@ -11,6 +11,7 @@
 // ==/UserScript==
 
 //Avoid conflicts
+var is_premium=true;
 this.$ = this.jQuery = jQuery.noConflict(true);
 $(document).ready(function(){
         $('#pop-limit').find('a').click();
