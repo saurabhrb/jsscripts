@@ -15,4 +15,4 @@ setTimeout(function(){
         is_premium=true;
         get_sources('');
         alert('Done');
-},1000);
+},2000);
