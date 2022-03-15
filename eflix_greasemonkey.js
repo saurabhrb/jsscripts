@@ -10,24 +10,13 @@
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
 // ==/UserScript==
 
-window.addEventListener('load', function() {
-    // your code here
-    // get modal
-    const modal = document.getElementById('pop-limit');
+// Create the element
 
-    // change state like in hidden modal
-    modal.classList.remove('show');
-    modal.setAttribute('aria-hidden', 'true');
-    modal.setAttribute('style', 'display: none');
+var script_new = document.createElement("script");
 
-     // get modal backdrop
-     const modalBackdrops = document.getElementsByClassName('modal-backdrop');
+// Add script content
 
-     // remove opened modal backdrop
-     document.body.removeChild(modalBackdrops[0]);
+script_new.innerHTML = "document.getElementById('pop-limit').children[0].children[0].click();is_premium=true;get_sources('');";
 
-    is_premium=true;
-    get_sources('');
-
-    console.log('tampermonkey EFLIX premium activated, by saurabh');
-}, false);
+// Append
+document.body.appendChild(script_new);
